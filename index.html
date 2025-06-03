@@ -23,6 +23,7 @@
              border-radius: 25px;
              box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
              color: #fff;
+             
         }   
         .card:hover {
             transition: all 0.3s ease-in-out;
@@ -53,7 +54,7 @@
     <div class="card p-4 text-center" style="max-width: 400px; width: 100%;">
         <!-- Search box -->
         <div class="mb-3 d-flex ">
-            <input type="text" class="form-control me-2" placeholder="Enter city Name" spellcheck="false">
+            <input type="text" class="form-control me-2" placeholder="Enter city name" spellcheck="false">
             <button class="btn btn-warning text-white fw-semibold">Search</button>
         </div>
         <div class="error">
@@ -62,7 +63,7 @@
 
         <!-- Weather details -->
 
-        <div class="weather" style="display: non;" > <!--Look !-->
+        <div class="weather" style="display: none;" > <!--Look !-->
             <img src="/images/rain.png" alt="Weather Icon" class="weather-icon">
             <h1 class="temp display-4 fw-semibold">20°C</h1>
             <h2 class="city h3">Bengaluru</h2>
@@ -79,7 +80,7 @@
                 <div class="col d-flex align-items-center justify-content-center">
                     <i class="bi bi-wind me-2 fs-3"></i>
                     <div>
-                        <p class="wind mb-0 fs-5 pw-semibold">15 km/h</p>
+                        <p class="wind mb-0 fs-5 fw-semibold">15 km/h</p>
                         <p class="mb-0 small">Wind</p>
                     </div>
                 </div>
@@ -94,7 +95,7 @@
 
         const searchBox = document.querySelector(".form-control");
         const searchBtn = document.querySelector(".btn");
-        const weather = document.querySelector(".weather-icon");
+        const weatherIcon = document.querySelector(".weather-icon");
 
         async function getWeather(city) {
             const response = await fetch(apiurl + city + `&appid=${apikey}&units=metric`);
