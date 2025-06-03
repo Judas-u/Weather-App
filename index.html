@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="card">
+        <!-- Search box -->
         <div class="search">
             <input type="text" class="form-control" placeholder="Enter City Name">
             <button class="btn btn-light fw-semibold">Search</button>
@@ -18,7 +19,30 @@
             <p><i class="bi bi-exclamation-triangle"></i>Invalid city name. Please try again!</p>
         </div>
 
+        <!-- Weather details -->
 
+        <div class="weather" dispaly="none">
+            <img src="/images/rain.png" alt="weather-icon" class="weather-icon">
+            <h1 class="temp">20°C</h1>
+            <h1>Bengaluru</h1>
+
+            <div class="details">
+                <img src="/images/humidity.png" alt="humidity-icon" class="humidity-icon">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+
+                <div class="col">
+                    <img src="/images/wind.png" alt="wind-speed-icon" class="wind-icon">
+                    <div>
+                        <p class="wind">15 Km/h</p>
+                        <p>Wind</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </body>
 </html>
