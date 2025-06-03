@@ -8,9 +8,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     
     <style>
+        body { 
+            height: 100vh;
+            background: linear-gradient(145deg, #65a7f9, #c86bf7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        .card {
+             background: rgba(255, 255, 255, 0.15);
+             backdrop-filter: blur(25px);
+             border-radius: 25px;
+             box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+             color: #fff;
+        }   
+        .card:hover {
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-10px);
+        }
+
         .weather-icon {
             width: 100px;
             margin: 20px auto;
+        }
+        .error {
+            background-color: rgba(225, 0, 0,0.1);
+            padding: 10px;;
+            border-radius: 15px;
+            margin-top: 15px;
+            display: non;   /* look ! */
+        }
+        .error p {
+            color: #f00303;
+            font-size: 16px;
+            font-weight: 500;
+            height: 15px;
+            font-size: medium;
         }
     </style>
 </head>
@@ -22,12 +57,12 @@
             <button class="btn btn-warning text-white fw-semibold">Search</button>
         </div>
         <div class="error">
-            <p><i class="bi bi-exclamation-triangle"></i>Invalid city name. Please try again!</p>
+            <p><i class="bi bi-exclamation-triangle"> </i>Invalid city name. Please try again!</p>
         </div>
 
         <!-- Weather details -->
 
-        <div class="weather" >
+        <div class="weather" style="display: non;" > <!--Look !-->
             <img src="/images/rain.png" alt="Weather Icon" class="weather-icon">
             <h1 class="temp display-4 fw-semibold">20°C</h1>
             <h2 class="city h3">Bengaluru</h2>
@@ -45,7 +80,7 @@
                     <i class="bi bi-wind me-2 fs-3"></i>
                     <div>
                         <p class="wind mb-0 fs-5 pw-semibold">15 km/h</p>
-                        <p class="mb-0 small"></p>
+                        <p class="mb-0 small">Wind</p>
                     </div>
                 </div>
             </div>
